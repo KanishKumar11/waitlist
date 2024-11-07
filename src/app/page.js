@@ -59,13 +59,15 @@ export default function page() {
           animate={{ opacity: 1, x: "0%", y: "10%" }}
           transition={{ ease: "easeInOut", type: "spring" }}
         >
-          <h3 className="text-2xl">Yes you in line</h3>
-          <p className="text-pred">you have waitlisted successfully!</p>
+          <h3 className="text-2xl">Yes, you the in line!</h3>
+          <p className="text-pred text-sm">
+            &quot;You&#39;re successfully on the waitlist!
+          </p>
           <img
             src="/gif.webp"
             width={500}
             height={500}
-            className="bg-cover"
+            className="bg-cover rounded-xl"
             alt=""
           />
         </motion.div>
