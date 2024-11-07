@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
 import { saveEmail } from "@/actions/wishlist";
 import { motion } from "framer-motion"; // Install framer-motion if not already installed
+import Link from "next/link";
 
 export default function EmbeddedWishlist({ params }) {
   const [wishlist, setWishlist] = useState(null);
@@ -103,7 +104,10 @@ export default function EmbeddedWishlist({ params }) {
             </motion.div>
           )}
           <p className="mt-2 text-xs text-gray-500">
-            Powered by <span className="text-red-500">poster.xyz</span>
+            Powered by{" "}
+            <Link href="/">
+              <span className="text-red-500">poster.xyz</span>
+            </Link>
           </p>
         </div>
       </BackgroundGradient>

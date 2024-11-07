@@ -2,13 +2,14 @@
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
 import Logo from "./Logo";
+import { Button } from "./ui/button";
 
 export default function Header() {
   const { data: session } = useSession();
 
   return (
-    <header className="bg-white shadow-sm">
-      <nav className="max-w-7xl mx-auto px-10 py-3 flex justify-between items-center">
+    <header className="bg-white shadow-sm w-screen">
+      <nav className="max-w-7xl mx-auto px-10 py-1 flex justify-between items-center">
         <Logo />
         <div>
           {session ? (
@@ -21,7 +22,9 @@ export default function Header() {
           ) : (
             <Link href="/auth">
               {" "}
-              <button>Sign in</button>
+              <Button className="bg-pred px-10 py-6 text-lg rounded-xl">
+                Sign in
+              </Button>
             </Link>
           )}
         </div>
