@@ -2,7 +2,7 @@
   const script = document.currentScript;
   const wishlistId = script.getAttribute("data-wishlist-id");
   const baseUrl =
-    script.getAttribute("data-base-url") || "http://localhost:3000"; // Fallback URL
+    script.getAttribute("data-base-url") || "https://theposter.xyz"; // Fallback URL
 
   const container = document.createElement("div");
   container.id = "wishlist-container";
