@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
@@ -60,7 +61,7 @@ export default function page() {
         >
           <h3 className="text-2xl">Yes you in line</h3>
           <p className="text-pred">you have waitlisted successfully!</p>
-          <Image
+          <img
             src="/gif.webp"
             width={500}
             height={500}
