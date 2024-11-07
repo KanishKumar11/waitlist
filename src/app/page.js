@@ -10,7 +10,7 @@ export default function page() {
   const MotionImg = motion.create(Image);
   return (
     <>
-      <div className="min-h-[75vh] mx-auto flex items-center justify-center flex-col bg-[#F5F5F5] gap-16 relative">
+      <div className="min-h-[75vh] mx-auto flex items-center justify-center flex-col bg-[#F5F5F5] gap-16 relative overflow-x-hidden">
         <Hero />
         <WhyUs />
         <MotionImg
