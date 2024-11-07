@@ -44,7 +44,7 @@ export default function Hero() {
             sentence="Craft Waitlist like a F****ing pro "
             className="md:text-7xl"
           />
-          <TypingEffect text="A tool that keeps your WhatsApp groups continuously active by regenerating them seamlessly." />
+          <TypingEffect text="A simple, one-step tool to instantly create a waitlist." />
         </div>
         <Link href="/dashboard/wishlist/new" className="mx-auto">
           <Button className="bg-pred px-10 py-6 text-lg rounded-xl w-max mx-auto">
