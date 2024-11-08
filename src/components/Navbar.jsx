@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm w-screen">
-      <nav className="max-w-7xl mx-auto px-10 py-1 flex justify-between items-center">
+      <nav className="max-w-7xl mx-auto lg:px-10 px-4 py-1 flex justify-between items-center">
         <Logo />
         <div>
           {session ? (
@@ -22,7 +22,7 @@ export default function Header() {
           ) : (
             <Link href="/auth">
               {" "}
-              <Button className="bg-pred px-10 py-6 text-lg rounded-xl">
+              <Button className="bg-pred lg:px-10 px-6 lg:py-6 py-4 text-lg rounded-xl">
                 Sign in
               </Button>
             </Link>

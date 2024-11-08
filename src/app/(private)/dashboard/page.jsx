@@ -31,7 +31,7 @@ export default function DashboardPage() {
 
   return (
     <div className="bg-[#F2F2F2] flex h-full min-h-[80vh] max-w-7xl  mx-auto">
-      <div className="bg-white h-auto  p-5">
+      <div className="bg-white h-auto lg:block hidden p-5">
         <Link href="/dashboard/wishlist/new">
           <button className="bg-pred hover:bg-red-600 transition-all ease-in-out text-white text-xl flex flex-col items-center justify-center rounded-xl p-5 px-8">
             <Plus />
@@ -40,15 +40,21 @@ export default function DashboardPage() {
         </Link>
       </div>
       <div className="flex flex-col items-center justify-center p-5 gap-5 max-w-2xl  mx-auto">
-        <h1 className="font-medium text-6xl text-center text-balance ">
+        <h1 className="font-medium lg:text-6xl text-2xl text-center text-balance ">
           Craft Waitlist like a F****ing pro{" "}
         </h1>
-        <p className="text-center text-balance">
+        <p className="text-center text-balance lg:text-base text-sm">
           A tool that keeps your WhatsApp groups continuously active by
           regenerating them seamlessly.
         </p>
+        <Link href="/dashboard/wishlist/new" className="lg:hidden block">
+          <button className="bg-pred hover:bg-red-600 transition-all ease-in-out text-white text-xl flex flex-row gap-3 items-center justify-center rounded-xl p-5 px-8">
+            Add
+            <Plus />
+          </button>
+        </Link>
         <div className="flex flex-col gap-5">
-          <h2 className="font-medium text-4xl">Your Waitlist</h2>
+          <h2 className="font-medium lg:text-4xl text-2xl">Your Waitlist</h2>
           {wishlists &&
             wishlists.map((item) => (
               <WaitlistCard data={item} key={item._id} />
@@ -86,9 +92,9 @@ function WaitlistCard({ data }) {
 
   return (
     <Link href={`/dashboard/wishlist/${data._id}/edit`}>
-      <div className="flex bg-white min-w-[300px] w-[500px] items-center justify-between rounded-xl p-5">
+      <div className="flex bg-white min-w-[280px] lg:w-[500px] items-center justify-between rounded-xl p-5">
         <div className="flex flex-col  font-medium">
-          <h3 className="text-xl">{data.projectName || "jjj"}</h3>
+          <h3 className="text-xl">{data.projectName}</h3>
           <p className="text-pred text-sm">{data.users} joined</p>
         </div>
         <div className="flex flex-col text-xl items-center justify-between h-full">

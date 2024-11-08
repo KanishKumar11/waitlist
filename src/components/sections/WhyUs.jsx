@@ -23,7 +23,7 @@ export default function WhyUs() {
         className="md:text-3xl"
       />
       <AnimatedGroup
-        className="grid grid-cols-2 gap-4 p-8 md:grid-cols-3 "
+        className="grid sm:grid-cols-2 gap-4 p-8 md:grid-cols-3 "
         preset="scale"
       >
         {data.map((item) => (

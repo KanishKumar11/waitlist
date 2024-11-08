@@ -12,13 +12,12 @@ export default function page() {
     <>
       <div className="min-h-[75vh] mx-auto flex items-center justify-center flex-col bg-[#F5F5F5] gap-16 relative overflow-x-hidden">
         <Hero />
-        <WhyUs />
         <MotionImg
           src="/1.svg"
           alt=""
           width={500}
           height={500}
-          className="absolute left-0 top-[10%] w-[220px] lg:block hidden"
+          className="absolute left-0 top-[6%] lg:top-[10%] lg:w-[220px] w-[150px] lg:block "
           initial={{ opacity: 0, x: 0, y: 0 }}
           animate={{ opacity: 1, x: 0, y: "10%" }}
           transition={{ ease: "easeInOut", type: "spring" }}
@@ -48,13 +47,13 @@ export default function page() {
           alt=""
           width={500}
           height={500}
-          className="absolute right-0 top-[10%] w-[250px] lg:block hidden"
+          className="absolute right-0 lg:top-[10%] lg:w-[250px] block top-[6%] w-[150px]"
           initial={{ opacity: 0, x: 0, y: 0 }}
           animate={{ opacity: 1, x: "0%", y: "10%" }}
           transition={{ ease: "easeInOut", type: "spring" }}
         />
         <motion.div
-          className="bg-white rounded-2xl py-14 px-8  flex-col gap-4 absolute right-[3%] top-[23%] w-[320px] rotate-[-20deg] lg:flex hidden"
+          className="bg-white rounded-2xl py-14 px-8  flex-col gap-4 lg:absolute right-[3%] top-[23%] w-[320px] rotate-[-20deg] flex  border  lg:mt-0 -mt-52 mb-10"
           initial={{ opacity: 0, x: 0, y: 0, rotate: "12deg" }}
           animate={{ opacity: 1, x: "0%", y: "10%" }}
           transition={{ ease: "easeInOut", type: "spring" }}
@@ -71,6 +70,7 @@ export default function page() {
             alt=""
           />
         </motion.div>
+        <WhyUs />
       </div>
       <div className="bg-pred mt-20 py-40 text-7xl text-center text-white">
         Contact the CEO

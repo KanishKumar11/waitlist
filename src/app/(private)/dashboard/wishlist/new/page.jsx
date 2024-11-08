@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
 import { Textarea } from "@/components/ui/textarea";
+import Link from "next/link";
 
 export default function WishlistMaker() {
   const [selectedElement, setSelectedElement] = useState("heading");
@@ -71,7 +72,9 @@ export default function WishlistMaker() {
   };
   return (
     <div className="max-w-7xl min-h-[80vh] mx-auto p-5 bg-gradient-to-b from-white to-gray-100 flex flex-col gap-5">
-      <button className="bg-gray-300 rounded-md px-5 py-2 w-max">Back</button>
+      <Link href="/dashboard">
+        <button className="bg-gray-300 rounded-md px-5 py-2 w-max">Back</button>
+      </Link>
 
       {/* Project Name Section */}
       <div className="bg-white rounded-xl p-5">
@@ -89,7 +92,7 @@ export default function WishlistMaker() {
       </h1>
 
       {/* Sidebar for Editing Text and Button Properties */}
-      <div className="flex gap-10">
+      <div className="flex gap-10 md:flex-row flex-col">
         {/* Sidebar */}
         <div className="w-[200px] flex flex-col gap-3 bg-white rounded-xl p-5 h-auto">
           <div className="text-lg font-semibold">Properties</div>

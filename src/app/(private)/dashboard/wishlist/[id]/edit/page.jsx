@@ -132,7 +132,7 @@ export default function WishlistEditor({ params }) {
           </div>
           {/* Wishlist Name Section */}
           <div className="bg-white rounded-xl p-5">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between md:flex-row flex-col gap-5">
               <div className="flex-grow mr-4">
                 <Label htmlFor="wishlist-name">Wishlist Name</Label>
                 <Input
@@ -169,7 +169,7 @@ export default function WishlistEditor({ params }) {
           </div>
           <h1 className="text-2xl text-center">Edit your wishlist</h1>
           {/* Sidebar for Editing Text and Button Properties */}
-          <div className="flex gap-10">
+          <div className="flex gap-10 md:flex-row flex-col">
             {/* Sidebar */}
             <div className="w-[200px] flex flex-col gap-3 bg-white rounded-xl p-5 h-auto">
               <div className="text-lg font-semibold">Properties</div>
