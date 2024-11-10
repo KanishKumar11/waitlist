@@ -14,9 +14,9 @@ export default function Header() {
         <div>
           {session ? (
             <>
-              <Link href="/dashboard" className="mr-4">
+              {/* <Link href="/dashboard" className="mr-4">
                 Dashboard
-              </Link>
+              </Link> */}
               <button onClick={() => signOut()}>Sign out</button>
             </>
           ) : (

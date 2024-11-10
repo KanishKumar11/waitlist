@@ -1,7 +1,7 @@
 "use client";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Bold, Copy, Italic, Share } from "lucide-react";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { submitWishlist } from "@/actions/wishlist";
@@ -19,7 +19,7 @@ import Link from "next/link";
 
 export default function WishlistMaker() {
   const [selectedElement, setSelectedElement] = useState("heading");
-  const [name, setName] = useState(`#Wishlist${new Date().getMilliseconds()}`);
+  const [name, setName] = useState();
   const [showDialog, setShowDialog] = useState(false);
   const [wishlistId, setWishlistId] = useState(null);
   const [elements, setElements] = useState({
@@ -70,6 +70,9 @@ export default function WishlistMaker() {
       console.error(result.error);
     }
   };
+  useEffect(() => {
+    setName(`#Wishlist${new Date().getMilliseconds().toString()}`);
+  }, []);
   return (
     <div className="max-w-7xl min-h-[80vh] mx-auto p-5 bg-gradient-to-b from-white to-gray-100 flex flex-col gap-5">
       <Link href="/dashboard">
@@ -83,7 +86,7 @@ export default function WishlistMaker() {
           type="text"
           placeholder="Sculpt Waitlist"
           value={name}
-          onChange={setName}
+          onChange={(e) => setName(e.target.value)}
         />
       </div>
 
