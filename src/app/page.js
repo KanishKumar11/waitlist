@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/sections/Hero";
 import WhyUs from "@/components/sections/WhyUs";
 import Image from "next/image";
+import Link from "next/link";
 export default function page() {
   const MotionImg = motion.create(Image);
   return (
@@ -73,7 +74,7 @@ export default function page() {
         <WhyUs />
       </div>
       <div className="bg-pred mt-20 py-40 text-7xl text-center text-white">
-        Contact the CEO
+        <Link href="mailto:kulkarnisampreet9@gmail.com">Contact the CEO</Link>
       </div>
       <Footer />
     </>
