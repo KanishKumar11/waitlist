@@ -44,8 +44,7 @@ export default function DashboardPage() {
           Craft Waitlist like a F****ing pro{" "}
         </h1>
         <p className="text-center text-balance lg:text-base text-sm">
-          A tool that keeps your WhatsApp groups continuously active by
-          regenerating them seamlessly.
+          A simple, one-step tool to instantly create a waitlist.
         </p>
         <Link href="/dashboard/wishlist/new" className="lg:hidden block">
           <button className="bg-pred hover:bg-red-600 transition-all ease-in-out text-white text-xl flex flex-row gap-3 items-center justify-center rounded-xl p-5 px-8">
